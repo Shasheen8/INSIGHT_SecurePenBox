@@ -1,0 +1,54 @@
+.no-top-marg {
+	margin-top: 0;
+}
+
+.bottom-marg-10 {
+	margin-bottom: 10px;
+}
+
+.bottom-marg-15 {
+	margin-bottom: 15px;
+}
+
+.top-marg-10 {
+	margin-top: 10px;
+}
+
+.left-marg-10 {
+	margin-left: 10px;
+}
+
+.input-group-addon {
+	min-width: 120px;
+}
+
+.fr {
+	float: right;
+}
+
+.author span {
+	color: #fff;
+}
+
+.signup-btn{
+    top: 40px;
+    right: 80px;
+    position: absolute;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-image: linear-gradient(#42455a, #42455a),radial-gradient(circle at top left, #fd00da, #19d7f8);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.signup-btn span{
+    display: block;
+    padding: 8px 22px;
+}
+
+.logo img{
+    width: 200px;
+    margin-top: -7px;
+    margin-right: 48px;

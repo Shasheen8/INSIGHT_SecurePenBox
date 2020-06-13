@@ -1,0 +1,93 @@
+<!doctype html>
+<html ng-app="s3-upload">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Secure Penbox</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="components/toastr/toastr.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JavaScript Libs -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="components/angular/angular.js"></script>
+  <script src="components/toastr/toastr.min.js"></script>
+  <script src="components/aws-sdk-js/dist/aws-sdk.min.js"></script>
+
+  <!-- Our JavaScript -->
+  <script src="js/application.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+</head>
+<body ng-controller="UploadController">
+  <div class="container-fluid">
+    <div class="page-header no-top-marg">
+      <div class="fr author">
+        <div class="signup-btn"><span>By Shasheen Bandodkar</span></div>
+      </div>
+      <div class="logo"><img src=logo.png></div>
+      <h1> Welcome to Secure Penbox</h1>
+      <br>
+      <h1>Upload your files to the S3 BUCKET </h1>
+    </div>
+    <div class="row">
+      <!-- AWS Details-->
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add Your AWS Details Here</h3>
+          </div>
+          <div class="panel-body">
+            <div class="input-group bottom-marg-10">
+              <span class="input-group-addon">ACCESS KEY</span>
+              <input ng-model="creds.access_key" type="text" class="form-control" placeholder="Accesskey">
+            </div>
+            <div class="input-group bottom-marg-10">
+              <span class="input-group-addon">SECRET KEY</span>
+              <input ng-model="creds.secret_key" type="text" class="form-control" placeholder="Secretkey">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">BUCKET</span>
+              <input ng-model="creds.bucket" type="text" class="form-control" placeholder="my_upload_bucket">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Upload Form -->
+      <div class="col-md-8">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <select class="fr" ng-model="sizeLimit">
+              <option value="5292880">5MB Upload Limit</option>
+              <option value="10585760">10MB Upload Limit</option>
+              <option value="15878640">15MB Upload Limit</option>
+            </select>
+            <h3 class="panel-title">Upload The File Here</h3>
+          </div>
+          <div class="panel-body">
+            <input class="bottom-marg-15" type="file" name="file" file></input>
+            <!-- Progress Bar -->
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="{{ uploadProgress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ uploadProgress }}%;">
+                {{ uploadProgress == 0 ? '' : uploadProgress + '%' }}
+              </div>
+            </div>
+            <a class="btn btn-primary btn-block btn-lg" ng-click="upload()">Upload</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <hr/>
+        <h3>Secure Penbox Features</h3>
+        <ul>
+          <li>Performs a thorough Vulnerability assessment and Malware analysis of your Web Application</li>
+          <li>The Results of the Enumeration will be emailed to you</li>
+        </ul>
+        <hr/>
