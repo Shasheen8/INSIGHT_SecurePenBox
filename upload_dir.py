@@ -5,15 +5,15 @@ import os.path
 import sys
 
 # Fill these in - you get them when you sign up for S3
-AWS_ACCESS_KEY_ID = 'AKIAXLC2QA4VHAFOHRGC'
-AWS_ACCESS_KEY_SECRET = 'MkBgxlc79sJEEOo18Ec+9ZSzBlxFpuGNVlsGEBzg'
+AWS_ACCESS_KEY_ID = '*********Your Access Key***********'
+AWS_ACCESS_KEY_SECRET = '*******************Your Secret key*************'
 # Fill in info on data to upload
 # destination bucket name
-bucket_name = 'webappsimages'
+bucket_name = '******BUCKET********'
 # source directory
-sourceDir = 'D:\Docker_Test'
+sourceDir = '********Path on your local machine*********'
 # destination directory name (on s3)
-destDir = 'webappsimages'
+destDir = '*******Destination directory in your bucket******'
 
 #max size in bytes before uploading in parts. between 1 and 5 GB recommended
 MAX_SIZE = 20 * 1000 * 1000
