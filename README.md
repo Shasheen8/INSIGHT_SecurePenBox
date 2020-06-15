@@ -58,10 +58,13 @@ python upload_dir.py
 
 ### Running the tests on the Web Application in the Cloud. 
 
+Tested this on a Web Application I worked on, MyGameSite. - Linked on my Github. 
+
+
 For this particular test I used the OWASP- Juice Shop Web Application for testing the vulnerabilites.
 OWASP Juice Shop is probably the most modern and sophisticated insecure web application! It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications!
 
-[OWASPJuice-shop](https://github.com/bkimminich/juice-shop)
+[OWASP Juice-shop](https://github.com/bkimminich/juice-shop)
 
 
 Inside the Ec2 instance
@@ -71,7 +74,17 @@ Syncing the Ec2 instance with the S3 Bucket using the AWS CLI
 aws s3 sync s3://bucket_name/<webapp_image> <directory_name>
 ```
 
-After Fetching the Docker image running it. For this particular test.
+
+After Fetching the Docker image running it. 
+
+For Testing MyGameSite. *Make sure all the necessary dev tools are installed.*  
+```
+docker build -t flaskapp:latest .
+
+docker run -it -d -p 80:5000 flaskapp
+```
+
+For testing the OWASP Juice Shop.
 ```
 docker run --rm -p 80:3000 bkimminich/juice-shop
 ```
@@ -83,13 +96,13 @@ sudo ./penbox_enum.sh <TargetURL---(localhost)>
 
 The PenBox Enumeration carries a series of test with a common usernames and passwords list on the Web Application and presents the results in the text file and xml file. 
 The Test's include 
-- Nmap 
-- Nikto
-- Dirb Scan 
-- Davtest
-- Medusa
-- Enum4Linux
-- RCP
+- [Nmap](https://github.com/nmap/nmap) 
+- [Nikto](https://github.com/sullo/nikto)
+- [Dirb Scan](https://tools.kali.org/web-applications/dirb)
+- [Davtest](https://tools.kali.org/web-applications/davtest)
+- [Medusa](https://securedyou.com/medusa-free-download-parallel-password-cracker-tool/)
+- [Enum4Linux](https://labs.portcullis.co.uk/tools/enum4linux/)
+- [WpScan](https://github.com/wpscanteam/wpscan)
 
 
 ** More tests are going to be added in the future **
