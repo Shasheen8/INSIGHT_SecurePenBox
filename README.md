@@ -1,4 +1,7 @@
 # Secure PenBox
+<p align="center">
+  <img width="460" height="300" src="https://github.com/Shasheen8/INSIGHT_SecurePenBox/blob/master/Images/logo%20penbox.PNG">
+</p>
 
 Secure PenBox:
 A sandboxed penetration testing environment that lets the user upload an image of their web application and conducts standard vulnerability assessments using a predefined set of enumeration tools and presents the results in a report.
@@ -111,7 +114,8 @@ The Test's include
 
 The results will be emailed to the particular user at the specified email. 
 
-
+## Authors 
+- **Shasheen Bandodkar** (shasheenbandodkar98@gmail.com)
 
 ## Acknowledgments
 - Insight Data Engineering Team
