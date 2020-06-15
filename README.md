@@ -61,7 +61,7 @@ python upload_dir.py
 For this particular test I used the OWASP- Juice Shop Web Application for testing the vulnerabilites.
 OWASP Juice Shop is probably the most modern and sophisticated insecure web application! It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications!
 
--[OWASP-Juice-shop] (https://github.com/bkimminich/juice-shop)
+[OWASP-Juice-shop] (https://github.com/bkimminich/juice-shop)
 
 
 Inside the Ec2 instance
