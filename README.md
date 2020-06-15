@@ -6,42 +6,57 @@ Used the Aws Ec2 cloud service to produce a sandboxed Kali Linux environment, sy
 This project allows developers to test and assess their web applications for different bugs, vulnerabilities and loopholes before pushing their secure and bug free product to the internet.
 
 
-## Solution Pipeline
+## Work Flow for the Secure PenBox
 
 ![](Images/SolPipeline.PNG)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-Things you need to install the software and how to install them
+Things you need to have pre-installed.
 
 ```
 Have Kali Linux Pre-Installed 
 
 Have Docker Pre-Installed 
 
-```
+To Upload the Web Application Docker Image to the AWS S3 Bucket through your client machine: 
 
-### Installing
+Required Libraries: 
+Angular JS
+AWS Javascript SDK 
 
-A step by step series of examples that tell you how to get a development env running
+or
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Upload the Image through the Python Script. 
 
 ```
-until finished
+
+### Installing and Uploading
+
+For Uploading a Web App Image through the Application  
+Start a new shell, run the Python HTTP Server
+```
+sudo ./start_server.sh
+```
+Access the Application through //localhost:8000
+
+Put in the necessary details such as 
+Access Key
+Secret Key 
+Bucket Name
+& 
+Upload the Image to the particular s3 Bucket. 
+
+Upload the Web App Image through the Python Script. 
+```
+python upload_dir.py
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Running the tests on the Web Application on the Cloud. 
+
+
 
 
 
