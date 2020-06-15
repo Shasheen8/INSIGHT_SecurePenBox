@@ -1,4 +1,4 @@
-# Secure PenBox {align=center}
+<h1 align="center"> Secure PenBox </h1> 
 <p align="center">
   <img width="460" height="300" src="https://github.com/Shasheen8/INSIGHT_SecurePenBox/blob/master/Images/logo%20penbox.PNG">
 </p>
@@ -8,11 +8,13 @@ A sandboxed penetration testing environment that lets the user upload an image o
 Used the Aws Ec2 cloud service to produce a sandboxed Kali Linux environment, synced it with the S3 storage service to import a docker image of a test web application to the ec2 instance, used a bash script for enumeration and vulnerability assessment and exported the reports back to the user via an endpoint.   
 This project allows developers to test and assess their web applications for different bugs, vulnerabilities and loopholes before pushing their secure and bug free product to the internet.
 
+---
 
 ## Work Flow for the Secure PenBox
 
 ![](Images/SolPipeline.PNG)
 
+---
 
 ### Prerequisites
 
@@ -34,6 +36,8 @@ or
 Upload the Image through the Python Script. 
 
 ```
+
+---
 
 ### Installing and Uploading
 
@@ -58,6 +62,7 @@ Upload the Web App Image through the Python Script.
 python upload_dir.py
 ```
 
+---
 
 ### Running the tests on the Web Application in the Cloud. 
 
@@ -92,6 +97,8 @@ For testing the OWASP Juice Shop.
 docker run --rm -p 80:3000 bkimminich/juice-shop
 ```
 
+---
+
 ### Enumeration for the localhost 
 ```
 sudo ./penbox_enum.sh <TargetURL---(localhost)>
@@ -110,12 +117,18 @@ The Test's include
 
 ** More tests are going to be added in the future **
 
+---
+
 ### Post Enumeration 
 
 The results will be emailed to the particular user at the specified email. 
 
+---
+
 ## Authors 
 - **Shasheen Bandodkar** (shasheenbandodkar98@gmail.com)
+
+---
 
 ## Acknowledgments
 - Insight Data Engineering Team
