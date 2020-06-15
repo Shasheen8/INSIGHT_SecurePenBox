@@ -107,6 +107,14 @@ The Test's include
 
 ** More tests are going to be added in the future **
 
+### Post Enumeration 
+
+The results will be emailed to the particular user at the specified email. 
 
 
+
+## Acknowledgments
+- Insight Data Engineering Team
+- Yaman Sharaf Dabbagh 
+- Cheyne Wallace
 
