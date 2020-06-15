@@ -48,6 +48,8 @@ Bucket Name
 & 
 Upload the Image to the particular s3 Bucket. 
 
+OR
+
 Upload the Web App Image through the Python Script. 
 ```
 python upload_dir.py
