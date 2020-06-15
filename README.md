@@ -56,11 +56,41 @@ python upload_dir.py
 ```
 
 
-## Running the tests on the Web Application on the Cloud. 
+### Running the tests on the Web Application in the Cloud. 
+
+For this particular test I used the OWASP- Juice Shop Web Application for testing the vulnerabilites.
+OWASP Juice Shop is probably the most modern and sophisticated insecure web application! It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications!
+
+-[OWASP-Juice-shop] (https://github.com/bkimminich/juice-shop)
 
 
+Inside the Ec2 instance
+Syncing the Ec2 instance with the S3 Bucket using the AWS CLI 
 
+```
+aws s3 sync s3://bucket_name/<webapp_image> <directory_name>
+```
 
+After Fetching the Docker image running it. For this particular test.
+```
+docker run --rm -p 80:3000 bkimminich/juice-shop
+```
+
+### Enumeration for the localhost 
+```
+sudo ./penbox_enum.sh <TargetURL---(localhost)>
+```
+
+The PenBox Enumeration carries a series of test with a common usernames and passwords list on the Web Application and presents the results in the text file and xml file. 
+The Test's include 
+- Nmap 
+- Nikto
+- Dirb Scan 
+- Davtest
+- Medusa
+- Enum4Linux
+- RCP
+** More tests are going to be added in the future **
 
 
 
