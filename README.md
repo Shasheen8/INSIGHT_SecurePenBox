@@ -1,4 +1,4 @@
-# Secure PenBox
+# Secure PenBox {align=center}
 <p align="center">
   <img width="460" height="300" src="https://github.com/Shasheen8/INSIGHT_SecurePenBox/blob/master/Images/logo%20penbox.PNG">
 </p>
