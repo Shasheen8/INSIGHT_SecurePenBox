@@ -25,7 +25,7 @@ Have Kali Linux Pre-Installed
 
 Have Docker Pre-Installed 
 
-To Upload the Web Application Docker Image to the AWS S3 Bucket through your client machine: 
+To Upload the Web Application Docker Image to the AWS S3 Bucket through your local client machine: 
 
 Required Libraries: 
 Angular JS
@@ -75,7 +75,7 @@ OWASP Juice Shop is probably the most modern and sophisticated insecure web appl
 [OWASP Juice-shop](https://github.com/bkimminich/juice-shop)
 
 
-Inside the Ec2 instance
+Inside the Ec2 instance, 
 Syncing the Ec2 instance with the S3 Bucket using the AWS CLI 
 
 ```
