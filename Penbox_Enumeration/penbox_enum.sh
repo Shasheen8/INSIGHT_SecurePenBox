@@ -12,8 +12,9 @@ OKGREEN='\033[92m'
 OKORANGE='\033[93m'
 RESET='\e[0m'
 
-echo -e "$OKRED Scan with PenBox Enumeration Tool.$RESET"
+figlet -f slant "Secure PenBox" | lolcat 
 
+echo -e "$OKRED Scan with the PenBox Enumeration Tool.$RESET"
 echo -e "$OKORANGE Use ./Penbox_enum.sh target-ip-address or url ...$RESET"
 
 nmap -sS -T5 -sV -A --open -p- $TARGET -oX $TARGET.xml
