@@ -62,6 +62,8 @@ Upload the Web App Image through the Python Script.
 python upload_dir.py
 ```
 
+(Try uploading a Zip file of the web app image to make the process less tedious. )
+
 ---
 
 ### Running the tests on the Web Application in the Cloud. 
