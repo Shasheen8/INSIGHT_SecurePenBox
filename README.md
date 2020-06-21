@@ -1,18 +1,21 @@
 <h1 align="center"> Secure PenBox </h1> 
+
+- A sandboxed penetration testing environment that lets the user upload an image of their web application and conducts standard vulnerability assessments using a predefined set of enumeration tools and presents the results in a report.
+- Utilized the Aws Ec2 cloud service to produce a sandboxed Kali Linux environment, synced it with the S3 storage service to import a docker image of a test web application to the ec2 instance, used a bash script for enumeration and vulnerability assessment and exported the reports back to the user via an endpoint.   
+- This project allows developers to test and assess their web applications for different bugs, vulnerabilities and loopholes before pushing their secure and bug free product to the internet.
 <p align="center">
   <img width="460" height="300" src="https://github.com/Shasheen8/INSIGHT_SecurePenBox/blob/master/Images/logo%20penbox.PNG">
 </p>
 
-Secure PenBox:
-A sandboxed penetration testing environment that lets the user upload an image of their web application and conducts standard vulnerability assessments using a predefined set of enumeration tools and presents the results in a report.
-Used the Aws Ec2 cloud service to produce a sandboxed Kali Linux environment, synced it with the S3 storage service to import a docker image of a test web application to the ec2 instance, used a bash script for enumeration and vulnerability assessment and exported the reports back to the user via an endpoint.   
-This project allows developers to test and assess their web applications for different bugs, vulnerabilities and loopholes before pushing their secure and bug free product to the internet.
+### Motivation 
+
+- The motivation came from being unable to test web applications locally on the machine.  
 
 ---
 
 ## Work Flow for the Secure PenBox
 
-![](Images/SolPipeline.PNG)
+![](Images/SolP.PNG)
 
 ---
 
@@ -20,8 +23,7 @@ This project allows developers to test and assess their web applications for dif
 
 Things you need to have pre-installed.
 
-```
-Have Kali Linux Pre-Installed 
+``` 
 
 Have Docker Pre-Installed 
 
@@ -78,6 +80,13 @@ OWASP Juice Shop is probably the most modern and sophisticated insecure web appl
 
 
 Inside the Ec2 instance, 
+
+Add user priviledge to particular S3 bucket with the Secret_Key, Access_Key and Region
+
+```
+aws configure --
+```
+
 Syncing the Ec2 instance with the S3 Bucket using the AWS CLI 
 
 ```
@@ -99,14 +108,14 @@ For testing the OWASP Juice Shop.
 docker run --rm -p 80:3000 bkimminich/juice-shop
 ```
 
----
+
 
 ### Enumeration for the localhost 
 ```
 sudo ./penbox_enum.sh <TargetURL---(localhost)>
 ```
 
-The PenBox Enumeration carries a series of test with a common usernames and passwords list on the Web Application and presents the results in the text file and xml file. 
+The PenBox Enumeration carries a series of tests with a list of common usernames and passwords on the Web Application and presents the results in a text file and xml file. 
 The Test's include 
 - [Nmap](https://github.com/nmap/nmap) 
 - [Nikto](https://github.com/sullo/nikto)
