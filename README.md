@@ -116,7 +116,7 @@ sudo ./penbox_enum.sh <TargetURL---(localhost)>
 ```
 
 The PenBox Enumeration carries a series of tests with a list of common usernames and passwords on the Web Application and presents the results in a text file and xml file. 
-The Test's include 
+The tests include 
 - [Nmap](https://github.com/nmap/nmap) 
 - [Nikto](https://github.com/sullo/nikto)
 - [Dirb Scan](https://tools.kali.org/web-applications/dirb)
