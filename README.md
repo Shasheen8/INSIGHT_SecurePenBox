@@ -9,7 +9,7 @@
 
 ### Motivation 
 
-- The motivation came from being unable to test web applications locally on the machine.  
+- The motivation came from being unable to test and secure web applications locally on the machine.  
 
 ---
 
