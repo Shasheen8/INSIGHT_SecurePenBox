@@ -1,9 +1,9 @@
 #!/bin/bash
 
 TARGET="$1"
-USER_FILE="common_usernames.txt"
+USER_FILE="com_usernames.txt"
 PASS_FILE="/usr/share/wordlists/metasploit/burnett_top_1024.txt"
-MIN_PASS="common_pass.txt"
+MIN_PASS="com_passwords.txt"
 DIRB_DIR="/usr/share/dirb/wordlists/common.txt"
 SNMP_STRINGS="/usr/share/seclists/Miscellaneous/wordlist-common-snmp-community-strings.txt"
 OKBLUE='\033[94m'
