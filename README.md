@@ -15,7 +15,7 @@
 
 ## Work Flow for the Secure PenBox
 
-![](Images/SolP.PNG)
+![](Images/SolPipe.PNG)
 
 ---
 
